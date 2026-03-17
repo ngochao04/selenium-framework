@@ -1,0 +1,7 @@
+[
+  {"username":"standard_user","password":"secret_sauce","role":"user","expectSuccess":true,"description":"User hợp lệ"},
+  {"username":"locked_out_user","password":"secret_sauce","role":"user","expectSuccess":false,"description":"User bị khoá"},
+  {"username":"problem_user","password":"secret_sauce","role":"user","expectSuccess":true,"description":"Problem user"},
+  {"username":"wrong_user","password":"wrong_pass","role":"user","expectSuccess":false,"description":"Sai thông tin"},
+  {"username":"","password":"secret_sauce","role":"user","expectSuccess":false,"description":"Username rỗng"}
+]
