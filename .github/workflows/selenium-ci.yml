@@ -41,3 +41,10 @@ jobs:
             target/surefire-reports/
             target/screenshots/
           retention-days: 30
+      - name: 🔒 Verify secrets masked
+        run: |
+          echo "Username=$APP_USERNAME"
+          echo "Password=$APP_PASSWORD"
+        env:
+          APP_USERNAME: ${{ secrets.SAUCEDEMO_USERNAME }}
+          APP_PASSWORD: ${{ secrets.SAUCEDEMO_PASSWORD }}
