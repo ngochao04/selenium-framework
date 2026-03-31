@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="2" ignored="2" total="5" passed="1" failed="0" skipped="0">
+<testng-results retried="2" ignored="2" total="17" passed="13" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-17T14:58:06 ICT" name="Surefire suite" finished-at="2026-03-17T14:58:11 ICT" duration-ms="5253">
+  <suite started-at="2026-03-31T13:41:59 ICT" name="Lab9Suite" finished-at="2026-03-31T13:42:29 ICT" duration-ms="30505">
     <groups>
+      <group name="regression">
+        <method signature="LoginDDTTest.testLoginNegative(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.LoginDDTTest@7e07db1f]" name="testLoginNegative" class="tests.LoginDDTTest"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="LoginDDTTest.testLoginSmoke(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.LoginDDTTest@7e07db1f]" name="testLoginSmoke" class="tests.LoginDDTTest"/>
+      </group> <!-- smoke -->
     </groups>
-    <test started-at="2026-03-17T14:58:06 ICT" name="Surefire test" finished-at="2026-03-17T14:58:11 ICT" duration-ms="5253">
-      <class name="tests.FlakySimulationTest">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.FlakySimulationTest@2bbf180e]" started-at="2026-03-17T14:58:06 ICT" name="setUp" finished-at="2026-03-17T14:58:08 ICT" duration-ms="2053" status="PASS">
+    <test started-at="2026-03-31T13:41:59 ICT" name="LoginTests" finished-at="2026-03-31T13:42:25 ICT" duration-ms="25775">
+      <class name="tests.LoginTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@694abbdc]" started-at="2026-03-31T13:41:59 ICT" name="setUp" finished-at="2026-03-31T13:42:03 ICT" duration-ms="4053" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,7 +29,561 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method retried="true" signature="testFlakyScenario()[pri:0, instance:tests.FlakySimulationTest@2bbf180e]" started-at="2026-03-17T14:58:08 ICT" name="testFlakyScenario" description="Mô phỏng flaky test — fail 2 lần đầu, pass lần 3" finished-at="2026-03-17T14:58:08 ICT" duration-ms="8" status="SKIP">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@694abbdc]" started-at="2026-03-31T13:41:59 ICT" name="setUp" finished-at="2026-03-31T13:42:02 ICT" duration-ms="3320" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dev]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@694abbdc]" started-at="2026-03-31T13:41:59 ICT" name="setUp" finished-at="2026-03-31T13:42:02 ICT" duration-ms="3384" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dev]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLoginSuccess()[pri:0, instance:tests.LoginTest@694abbdc]" started-at="2026-03-31T13:42:02 ICT" name="testLoginSuccess" description="Đăng nhập hợp lệ → vào trang inventory" finished-at="2026-03-31T13:42:04 ICT" duration-ms="2047" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginSuccess -->
+        <test-method signature="testLockedOutUser()[pri:0, instance:tests.LoginTest@694abbdc]" started-at="2026-03-31T13:42:02 ICT" name="testLockedOutUser" description="Tài khoản bị khoá" finished-at="2026-03-31T13:42:04 ICT" duration-ms="1904" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLockedOutUser -->
+        <test-method signature="testLoginEmptyUsername()[pri:0, instance:tests.LoginTest@694abbdc]" started-at="2026-03-31T13:42:03 ICT" name="testLoginEmptyUsername" description="Đăng nhập với username rỗng" finished-at="2026-03-31T13:42:04 ICT" duration-ms="977" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginEmptyUsername -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@694abbdc]" started-at="2026-03-31T13:42:04 ICT" name="tearDown" finished-at="2026-03-31T13:42:05 ICT" duration-ms="728" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLoginEmptyUsername status=SUCCESS method=LoginTest.testLoginEmptyUsername()[pri:0, instance:tests.LoginTest@694abbdc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@694abbdc]" started-at="2026-03-31T13:42:04 ICT" name="tearDown" finished-at="2026-03-31T13:42:05 ICT" duration-ms="592" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLockedOutUser status=SUCCESS method=LoginTest.testLockedOutUser()[pri:0, instance:tests.LoginTest@694abbdc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@694abbdc]" started-at="2026-03-31T13:42:04 ICT" name="tearDown" finished-at="2026-03-31T13:42:05 ICT" duration-ms="768" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLoginSuccess status=SUCCESS method=LoginTest.testLoginSuccess()[pri:0, instance:tests.LoginTest@694abbdc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@694abbdc]" started-at="2026-03-31T13:42:05 ICT" name="setUp" finished-at="2026-03-31T13:42:06 ICT" duration-ms="1138" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dev]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLoginWrongPassword()[pri:0, instance:tests.LoginTest@694abbdc]" started-at="2026-03-31T13:42:06 ICT" name="testLoginWrongPassword" description="Đăng nhập sai mật khẩu → hiện thông báo lỗi" finished-at="2026-03-31T13:42:09 ICT" duration-ms="3145" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWrongPassword -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@694abbdc]" started-at="2026-03-31T13:42:09 ICT" name="tearDown" finished-at="2026-03-31T13:42:10 ICT" duration-ms="1581" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLoginWrongPassword status=SUCCESS method=LoginTest.testLoginWrongPassword()[pri:0, instance:tests.LoginTest@694abbdc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.LoginDDTTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginDDTTest@7e07db1f]" started-at="2026-03-31T13:42:06 ICT" name="setUp" finished-at="2026-03-31T13:42:08 ICT" duration-ms="1551" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dev]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginDDTTest@7e07db1f]" started-at="2026-03-31T13:42:06 ICT" name="setUp" finished-at="2026-03-31T13:42:08 ICT" duration-ms="2130" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dev]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLoginNegative(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.LoginDDTTest@7e07db1f]" started-at="2026-03-31T13:42:08 ICT" name="testLoginNegative" description="Negative test đăng nhập từ Excel" data-provider="excelNegativeData" finished-at="2026-03-31T13:42:10 ICT" duration-ms="2132" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[locked_out_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[locked out]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[User bị khoá]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginNegative -->
+        <test-method signature="testLoginSmoke(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.LoginDDTTest@7e07db1f]" started-at="2026-03-31T13:42:08 ICT" name="testLoginSmoke" description="Smoke test đăng nhập từ Excel" data-provider="excelLoginData" finished-at="2026-03-31T13:42:10 ICT" duration-ms="1748" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[inventory]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Đăng nhập hợp lệ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginSmoke -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginDDTTest@7e07db1f]" started-at="2026-03-31T13:42:10 ICT" name="tearDown" finished-at="2026-03-31T13:42:10 ICT" duration-ms="595" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLoginNegative status=SUCCESS method=LoginDDTTest.testLoginNegative(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.LoginDDTTest@7e07db1f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginDDTTest@7e07db1f]" started-at="2026-03-31T13:42:10 ICT" name="tearDown" finished-at="2026-03-31T13:42:11 ICT" duration-ms="525" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLoginSmoke status=SUCCESS method=LoginDDTTest.testLoginSmoke(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.LoginDDTTest@7e07db1f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginDDTTest@7e07db1f]" started-at="2026-03-31T13:42:10 ICT" name="setUp" finished-at="2026-03-31T13:42:13 ICT" duration-ms="2153" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dev]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginDDTTest@7e07db1f]" started-at="2026-03-31T13:42:11 ICT" name="setUp" finished-at="2026-03-31T13:42:12 ICT" duration-ms="1323" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dev]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLoginSmoke(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.LoginDDTTest@7e07db1f]" started-at="2026-03-31T13:42:12 ICT" name="testLoginSmoke" description="Smoke test đăng nhập từ Excel" data-provider="excelLoginData" finished-at="2026-03-31T13:42:14 ICT" duration-ms="1811" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[problem_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[inventory]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Problem user]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginSmoke -->
+        <test-method signature="testLoginNegative(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.LoginDDTTest@7e07db1f]" started-at="2026-03-31T13:42:13 ICT" name="testLoginNegative" description="Negative test đăng nhập từ Excel" data-provider="excelNegativeData" finished-at="2026-03-31T13:42:14 ICT" duration-ms="1433" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wrongpass]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[do not match]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Sai mật khẩu]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginNegative -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginDDTTest@7e07db1f]" started-at="2026-03-31T13:42:14 ICT" name="tearDown" finished-at="2026-03-31T13:42:14 ICT" duration-ms="328" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLoginSmoke status=SUCCESS method=LoginDDTTest.testLoginSmoke(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.LoginDDTTest@7e07db1f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginDDTTest@7e07db1f]" started-at="2026-03-31T13:42:14 ICT" name="tearDown" finished-at="2026-03-31T13:42:14 ICT" duration-ms="298" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLoginNegative status=SUCCESS method=LoginDDTTest.testLoginNegative(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.LoginDDTTest@7e07db1f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginDDTTest@7e07db1f]" started-at="2026-03-31T13:42:14 ICT" name="setUp" finished-at="2026-03-31T13:42:16 ICT" duration-ms="1587" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dev]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginDDTTest@7e07db1f]" started-at="2026-03-31T13:42:14 ICT" name="setUp" finished-at="2026-03-31T13:42:16 ICT" duration-ms="1592" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dev]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLoginSmoke(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.LoginDDTTest@7e07db1f]" started-at="2026-03-31T13:42:16 ICT" name="testLoginSmoke" description="Smoke test đăng nhập từ Excel" data-provider="excelLoginData" finished-at="2026-03-31T13:42:23 ICT" duration-ms="7049" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[performance_glitch_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[inventory]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Glitch user]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginSmoke -->
+        <test-method signature="testLoginNegative(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.LoginDDTTest@7e07db1f]" started-at="2026-03-31T13:42:16 ICT" name="testLoginNegative" description="Negative test đăng nhập từ Excel" data-provider="excelNegativeData" finished-at="2026-03-31T13:42:18 ICT" duration-ms="1886" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Username is required]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Username rỗng]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginNegative -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginDDTTest@7e07db1f]" started-at="2026-03-31T13:42:18 ICT" name="tearDown" finished-at="2026-03-31T13:42:18 ICT" duration-ms="385" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLoginNegative status=SUCCESS method=LoginDDTTest.testLoginNegative(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.LoginDDTTest@7e07db1f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginDDTTest@7e07db1f]" started-at="2026-03-31T13:42:18 ICT" name="setUp" finished-at="2026-03-31T13:42:19 ICT" duration-ms="1348" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dev]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLoginNegative(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.LoginDDTTest@7e07db1f]" started-at="2026-03-31T13:42:19 ICT" name="testLoginNegative" description="Negative test đăng nhập từ Excel" data-provider="excelNegativeData" finished-at="2026-03-31T13:42:21 ICT" duration-ms="1517" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Password is required]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Password rỗng]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginNegative -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginDDTTest@7e07db1f]" started-at="2026-03-31T13:42:21 ICT" name="tearDown" finished-at="2026-03-31T13:42:21 ICT" duration-ms="294" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLoginNegative status=SUCCESS method=LoginDDTTest.testLoginNegative(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.LoginDDTTest@7e07db1f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginDDTTest@7e07db1f]" started-at="2026-03-31T13:42:21 ICT" name="setUp" finished-at="2026-03-31T13:42:23 ICT" duration-ms="1554" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dev]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginDDTTest@7e07db1f]" started-at="2026-03-31T13:42:23 ICT" name="tearDown" finished-at="2026-03-31T13:42:24 ICT" duration-ms="1277" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLoginSmoke status=SUCCESS method=LoginDDTTest.testLoginSmoke(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.LoginDDTTest@7e07db1f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="testLoginNegative(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.LoginDDTTest@7e07db1f]" started-at="2026-03-31T13:42:23 ICT" name="testLoginNegative" description="Negative test đăng nhập từ Excel" data-provider="excelNegativeData" finished-at="2026-03-31T13:42:24 ICT" duration-ms="1448" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[wrong_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wrong_pass]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[do not match]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Sai cả hai]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginNegative -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginDDTTest@7e07db1f]" started-at="2026-03-31T13:42:24 ICT" name="tearDown" finished-at="2026-03-31T13:42:25 ICT" duration-ms="199" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLoginNegative status=SUCCESS method=LoginDDTTest.testLoginNegative(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.LoginDDTTest@7e07db1f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.LoginDDTTest -->
+    </test> <!-- LoginTests -->
+    <test started-at="2026-03-31T13:42:25 ICT" name="FlakyTests" finished-at="2026-03-31T13:42:29 ICT" duration-ms="4698">
+      <class name="tests.FlakySimulationTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.FlakySimulationTest@2a65fe7c]" started-at="2026-03-31T13:42:25 ICT" name="setUp" finished-at="2026-03-31T13:42:26 ICT" duration-ms="1366" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dev]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method retried="true" signature="testFlakyScenario()[pri:0, instance:tests.FlakySimulationTest@2a65fe7c]" started-at="2026-03-31T13:42:26 ICT" name="testFlakyScenario" description="Mô phỏng flaky test — fail 2 lần đầu, pass lần 3" finished-at="2026-03-31T13:42:26 ICT" duration-ms="1" status="SKIP">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Mô phỏng lỗi mạng tạm thời — lần 1]]>
@@ -44,45 +604,30 @@ at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInv
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFlakyScenario -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.FlakySimulationTest@2bbf180e]" started-at="2026-03-17T14:58:08 ICT" name="tearDown" finished-at="2026-03-17T14:58:08 ICT" duration-ms="190" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.FlakySimulationTest@2a65fe7c]" started-at="2026-03-31T13:42:26 ICT" name="tearDown" finished-at="2026-03-31T13:42:26 ICT" duration-ms="243" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testFlakyScenario status=SKIP method=FlakySimulationTest.testFlakyScenario()[pri:0, instance:tests.FlakySimulationTest@2bbf180e] output={null}]]]>
+                <![CDATA[[TestResult name=testFlakyScenario status=SKIP method=FlakySimulationTest.testFlakyScenario()[pri:0, instance:tests.FlakySimulationTest@2a65fe7c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.FlakySimulationTest@2bbf180e]" started-at="2026-03-17T14:58:08 ICT" name="setUp" finished-at="2026-03-17T14:58:10 ICT" duration-ms="1440" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.FlakySimulationTest@2a65fe7c]" started-at="2026-03-31T13:42:26 ICT" name="setUp" finished-at="2026-03-31T13:42:27 ICT" duration-ms="1283" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -98,7 +643,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method retried="true" signature="testFlakyScenario()[pri:0, instance:tests.FlakySimulationTest@2bbf180e]" started-at="2026-03-17T14:58:10 ICT" name="testFlakyScenario" description="Mô phỏng flaky test — fail 2 lần đầu, pass lần 3" finished-at="2026-03-17T14:58:10 ICT" duration-ms="1" status="SKIP">
+        <test-method retried="true" signature="testFlakyScenario()[pri:0, instance:tests.FlakySimulationTest@2a65fe7c]" started-at="2026-03-31T13:42:27 ICT" name="testFlakyScenario" description="Mô phỏng flaky test — fail 2 lần đầu, pass lần 3" finished-at="2026-03-31T13:42:27 ICT" duration-ms="0" status="SKIP">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Mô phỏng lỗi mạng tạm thời — lần 2]]>
@@ -119,45 +664,30 @@ at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInv
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFlakyScenario -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.FlakySimulationTest@2bbf180e]" started-at="2026-03-17T14:58:10 ICT" name="tearDown" finished-at="2026-03-17T14:58:10 ICT" duration-ms="319" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.FlakySimulationTest@2a65fe7c]" started-at="2026-03-31T13:42:27 ICT" name="tearDown" finished-at="2026-03-31T13:42:28 ICT" duration-ms="205" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testFlakyScenario status=SKIP method=FlakySimulationTest.testFlakyScenario()[pri:0, instance:tests.FlakySimulationTest@2bbf180e] output={null}]]]>
+                <![CDATA[[TestResult name=testFlakyScenario status=SKIP method=FlakySimulationTest.testFlakyScenario()[pri:0, instance:tests.FlakySimulationTest@2a65fe7c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.FlakySimulationTest@2bbf180e]" started-at="2026-03-17T14:58:10 ICT" name="setUp" finished-at="2026-03-17T14:58:11 ICT" duration-ms="974" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.FlakySimulationTest@2a65fe7c]" started-at="2026-03-31T13:42:28 ICT" name="setUp" finished-at="2026-03-31T13:42:29 ICT" duration-ms="1409" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -173,15 +703,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testFlakyScenario()[pri:0, instance:tests.FlakySimulationTest@2bbf180e]" started-at="2026-03-17T14:58:11 ICT" name="testFlakyScenario" description="Mô phỏng flaky test — fail 2 lần đầu, pass lần 3" finished-at="2026-03-17T14:58:11 ICT" duration-ms="1" status="PASS">
+        <test-method signature="testFlakyScenario()[pri:0, instance:tests.FlakySimulationTest@2a65fe7c]" started-at="2026-03-31T13:42:29 ICT" name="testFlakyScenario" description="Mô phỏng flaky test — fail 2 lần đầu, pass lần 3" finished-at="2026-03-31T13:42:29 ICT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFlakyScenario -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.FlakySimulationTest@2bbf180e]" started-at="2026-03-17T14:58:11 ICT" name="tearDown" finished-at="2026-03-17T14:58:11 ICT" duration-ms="222" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.FlakySimulationTest@2a65fe7c]" started-at="2026-03-31T13:42:29 ICT" name="tearDown" finished-at="2026-03-31T13:42:29 ICT" duration-ms="181" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testFlakyScenario status=SUCCESS method=FlakySimulationTest.testFlakyScenario()[pri:0, instance:tests.FlakySimulationTest@2bbf180e] output={null}]]]>
+                <![CDATA[[TestResult name=testFlakyScenario status=SUCCESS method=FlakySimulationTest.testFlakyScenario()[pri:0, instance:tests.FlakySimulationTest@2a65fe7c] output={null}]]]>
               </value>
             </param>
           </params>
@@ -189,6 +719,6 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.FlakySimulationTest -->
-    </test> <!-- Surefire test -->
-  </suite> <!-- Surefire suite -->
+    </test> <!-- FlakyTests -->
+  </suite> <!-- Lab9Suite -->
 </testng-results>
