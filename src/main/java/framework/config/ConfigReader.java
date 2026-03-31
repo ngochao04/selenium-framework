@@ -1,4 +1,3 @@
-// src/main/java/framework/config/ConfigReader.java
 package framework.config;
 
 import java.io.FileInputStream;
@@ -32,18 +31,18 @@ public class ConfigReader {
     public int getRetryCount()        { return Integer.parseInt(props.getProperty("retry.count", "1")); }
     public String getScreenshotPath() { return props.getProperty("screenshot.path", "target/screenshots/"); }
 
-    // ✅ Ưu tiên GitHub Secrets → fallback về config file
+    // ✅ Ưu tiên GitHub Secrets → fallback về config file (KHÔNG hardcode)
     public String getUsername() {
         String envVal = System.getenv("APP_USERNAME");
-        return (envVal != null && !envVal.isBlank()) 
-            ? envVal 
-            : props.getProperty("app.username", "standard_user");
+        return (envVal != null && !envVal.isBlank())
+                ? envVal
+                : props.getProperty("app.username");
     }
 
     public String getPassword() {
         String envVal = System.getenv("APP_PASSWORD");
-        return (envVal != null && !envVal.isBlank()) 
-            ? envVal 
-            : props.getProperty("app.password", "secret_sauce");
+        return (envVal != null && !envVal.isBlank())
+                ? envVal
+                : props.getProperty("app.password");
     }
 }

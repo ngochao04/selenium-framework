@@ -11,16 +11,22 @@ public class CartTest extends BaseTest {
 
     @Test(description = "Thêm 1 sản phẩm vào giỏ → badge hiển thị 1")
     public void testAddItemToCart() {
+        String username = System.getenv("APP_USERNAME");
+        String password = System.getenv("APP_PASSWORD");
+
         InventoryPage inventory = new LoginPage(getDriver())
-                .login("standard_user", "secret_sauce");
+                .login(username, password);
         inventory.addFirstItemToCart();
         Assert.assertEquals(inventory.getCartItemCount(), 1);
     }
 
     @Test(description = "Vào giỏ hàng → có 1 sản phẩm")
     public void testCartHasItem() {
+        String username = System.getenv("APP_USERNAME");
+        String password = System.getenv("APP_PASSWORD");
+
         CartPage cart = new LoginPage(getDriver())
-                .login("standard_user", "secret_sauce")
+                .login(username, password)
                 .addFirstItemToCart()
                 .goToCart();
         Assert.assertEquals(cart.getItemCount(), 1);
@@ -28,8 +34,11 @@ public class CartTest extends BaseTest {
 
     @Test(description = "Xóa sản phẩm → giỏ hàng rỗng")
     public void testRemoveItemFromCart() {
+        String username = System.getenv("APP_USERNAME");
+        String password = System.getenv("APP_PASSWORD");
+
         CartPage cart = new LoginPage(getDriver())
-                .login("standard_user", "secret_sauce")
+                .login(username, password)
                 .addFirstItemToCart()
                 .goToCart();
         cart.removeFirstItem();
@@ -38,8 +47,11 @@ public class CartTest extends BaseTest {
 
     @Test(description = "Fluent interface: login → add → cart → checkout")
     public void testFluentInterface() {
+        String username = System.getenv("APP_USERNAME");
+        String password = System.getenv("APP_PASSWORD");
+
         new LoginPage(getDriver())
-                .login("standard_user", "secret_sauce")
+                .login(username, password)
                 .addFirstItemToCart()
                 .goToCart()
                 .goToCheckout();
