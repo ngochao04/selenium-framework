@@ -9,7 +9,7 @@ Automation testing framework sử dụng Selenium WebDriver + TestNG + POM.
 
 ## Chạy local
 ```bash
-mvn clean test -Dbrowser=chrome -DsuiteXmlFile=testng.xml
+mvn clean test -Dbrowser=chrome -DsuiteXmlFile=testng-smoke.xml
 ```
 
 ## CI/CD
