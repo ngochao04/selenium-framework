@@ -11,6 +11,7 @@ public class LoginTest extends BaseTest {
     @Test(description = "Đăng nhập hợp lệ → vào trang inventory")
     public void testLoginSuccess() {
         LoginPage loginPage = new LoginPage(getDriver());
+
         String username = System.getenv("APP_USERNAME");
         String password = System.getenv("APP_PASSWORD");
 
@@ -21,7 +22,10 @@ public class LoginTest extends BaseTest {
     @Test(description = "Đăng nhập sai mật khẩu → hiện thông báo lỗi")
     public void testLoginWrongPassword() {
         LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.loginExpectingFailure("standard_user", "wrongpass");
+
+        String username = System.getenv("APP_USERNAME");
+
+        loginPage.loginExpectingFailure(username, "wrongpass");
         Assert.assertTrue(loginPage.isErrorDisplayed(), "Lỗi không hiển thị!");
         Assert.assertTrue(loginPage.getErrorMessage().contains("do not match"));
     }
@@ -29,14 +33,20 @@ public class LoginTest extends BaseTest {
     @Test(description = "Đăng nhập với username rỗng")
     public void testLoginEmptyUsername() {
         LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.loginExpectingFailure("", "secret_sauce");
+
+        String password = System.getenv("APP_PASSWORD");
+
+        loginPage.loginExpectingFailure("", password);
         Assert.assertTrue(loginPage.getErrorMessage().contains("Username is required"));
     }
 
     @Test(description = "Tài khoản bị khoá")
     public void testLockedOutUser() {
         LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.loginExpectingFailure("locked_out_user", "secret_sauce");
+
+        String password = System.getenv("APP_PASSWORD");
+
+        loginPage.loginExpectingFailure("locked_out_user", password);
         Assert.assertTrue(loginPage.getErrorMessage().contains("locked out"));
     }
 }
