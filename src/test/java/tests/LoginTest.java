@@ -11,7 +11,10 @@ public class LoginTest extends BaseTest {
     @Test(description = "Đăng nhập hợp lệ → vào trang inventory")
     public void testLoginSuccess() {
         LoginPage loginPage = new LoginPage(getDriver());
-        InventoryPage inventory = loginPage.login("standard_user", "secret_sauce");
+        String username = System.getenv("APP_USERNAME");
+        String password = System.getenv("APP_PASSWORD");
+
+        InventoryPage inventory = loginPage.login(username, password);
         Assert.assertTrue(inventory.isLoaded(), "Trang inventory chưa load!");
     }
 
