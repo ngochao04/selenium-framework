@@ -12,7 +12,7 @@ public class LoginTest extends BaseTest {
     public void testLoginSuccess() {
         LoginPage loginPage = new LoginPage(getDriver());
         InventoryPage inventory = loginPage.login("standard_user", "secret_sauce");
-        Assert.assertTrue(inventory.isLoaded(), "Trang inventory chưa load!");
+        Assert.assertTrue(false, "Force fail để test artifact");
     }
 
     @Test(description = "Đăng nhập sai mật khẩu → hiện thông báo lỗi")
